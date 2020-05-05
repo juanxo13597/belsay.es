@@ -1,7 +1,7 @@
 <!-- menu izquierda -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-success rounded-top mt-3">
             <a class="navbar-brand bg-light rounded p-2" href="#"><img src="assets/img/logo.png"
-                    alt="logo pizzeria belsay" high="100" width="100"></a>
+                    alt="logo pizzeria belsay" class="img-fluid" high="40" width="40"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

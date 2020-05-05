@@ -1,11 +1,11 @@
 
 
                 <center>
-                    <img src="assets/img/logo.png" alt="logo">
+                    <img src="assets/img/logo.png" class="img-fluid" alt="logo">
                     <h1>BELSAY (Fuentes de andalucía)</h1>
                     <h3>YA TIENE SU SITIO EN INTERNET. DESDE AHORA PODRÁS HACER TUS PEDIDOS ONLINE</h3>
 
-                    <table class="table table-hover text-center">
+                    <table class="table table-hover text-center table-responsive">
                         <thead>
                             <tr>
                                 <th scope="col">HORARIO</th>
@@ -21,26 +21,27 @@
                         <tbody>
                             <tr>
                                 <th>MEDIODIA</th>
-                                <td>1</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>6</td>
-                                <td>7</td>
+                                <?php
+                                    while($row = $horario['mediodia']->fetch_assoc()) {
+                                        echo "<td>".$row['horario']."</td>";
+                                    }
+
+                                ?>
                             </tr>
                             <tr>
                                 <th>NOCHE</th>
-                                <td>1</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td>5</td>
-                                <td>6</td>
-                                <td>7</td>
+                                <?php
+                                    while($row = $horario['noche']->fetch_assoc()) {
+                                        echo "<td>".$row['horario']."</td>";
+                                    }
+
+                                ?>
                             </tr>
                         </tbody>
                     </table>
+                    <div class="dropdown-divider"></div>
+
+                    <h2>REPARTO TODOS LOS DIAS</h2>
 
 
                 </center>

@@ -15,7 +15,7 @@ require_once("controllers/includes.php");
     <title>Pizzeria Belsay</title>
 </head>
 
-<body class="bg-light">
+<body class="bg-dark">
 
 
     <!-- container general -->
