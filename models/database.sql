@@ -19,7 +19,8 @@ CREATE TABLE clientes(
     telefono            varchar(255),
     direccion           varchar(255),
 
-    constraint pk_clientes primary key(id)
+    constraint pk_clientes primary key(id),
+    constraint uniq_clientes unique(email)
 
 )ENGINNE=INNODB DEFAULT CHARSET=utf8;
 
