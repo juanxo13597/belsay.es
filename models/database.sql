@@ -41,8 +41,8 @@ CREATE TABLE productos(
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 INSERT INTO productos(nombre, precio1, precio2, precio3, ingredientes, familia_id) VALUES 
-('Milanesa', '5.80', '8.20', '9.00', 'Tomate, orégano, mozzarella y york', 1),
-('Romana', '8.80', '12.10', '13.80', 'Tomate, orégano, mozzarella, aceitunas, alcachofa, champiñon y york', 1);
+('Milanesa', '5.8', '8.2', '9', 'Tomate, orégano, mozzarella y york', 1),
+('Romana', '8.8', '12.1', '13.8', 'Tomate, orégano, mozzarella, aceitunas, alcachofa, champiñon y york', 1);
 
 CREATE TABLE horario(
     id                  int(11) auto_increment,
