@@ -1,6 +1,6 @@
 <!-- menu izquierda -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-success rounded-top mt-3">
-            <a class="navbar-brand bg-light rounded p-2" href="#"><img src="assets/img/logo.png"
+            <a class="navbar-brand bg-light rounded p-2" href="index.php"><img src="assets/img/logo.png"
                     alt="logo pizzeria belsay" class="img-fluid" high="40" width="40"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,7 +12,7 @@
                         <a class="nav-link font-weight-bold" href="index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href="#">Carta</a>
+                        <a class="nav-link font-weight-bold" href="?pag=carta">Carta</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link font-weight-bold" href="#">Localización</a>

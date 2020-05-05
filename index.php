@@ -32,7 +32,7 @@ require_once("controllers/includes.php");
            <!-- fin box oferta -->
 
             <!-- box main -->
-            <div class="col-9 border-left border-success p-2">
+            <div class="col-9 border-left border-success p-3 pb-5">
             <?php require_once("controllers/".navegacion().".php"); ?>
             </div>
             <!-- fin box main -->
@@ -50,7 +50,7 @@ require_once("controllers/includes.php");
     <div class="align-bottom mt-2">
         <small class="text-center">
             <p><a class="text-success" href="index.php">pizzeriabelsay.es</a> | <a class="text-success"
-                    href="www.gesimar.es">By Gesimar Informática</a></p>
+                    href="http://gesimar.es/">By Gesimar Informática</a></p>
         </small>
     </div>
     <!-- fin copyright -->

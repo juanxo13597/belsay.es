@@ -1,6 +1,29 @@
 DROP DATABASE belsay;
 CREATE DATABASE belsay;
 USE belsay;
+
+CREATE TABLE familias(
+    id                  int(11) auto_increment,
+    nombre              varchar(255),
+    imagen              varchar(255),
+
+    constraint pk_familias primary key(id)
+
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+INSERT INTO familias(nombre, imagen) VALUES ('Pizzas', 'assets/img/carta/pizza.png');
+INSERT INTO familias(nombre, imagen) VALUES ('Chapatas', 'assets/img/carta/chapata.jpg');
+INSERT INTO familias(nombre, imagen) VALUES ('Roscas', 'assets/img/carta/rosca.jpg');
+INSERT INTO familias(nombre, imagen) VALUES ('Paninis', 'assets/img/carta/panini.jpg');
+INSERT INTO familias(nombre, imagen) VALUES ('Hot Dogs', 'assets/img/carta/hotdog.jpg');
+INSERT INTO familias(nombre, imagen) VALUES ('Bocatas', 'assets/img/carta/bocata.png');
+INSERT INTO familias(nombre, imagen) VALUES ('Ensaladas', 'assets/img/carta/ensalada.jpg');
+INSERT INTO familias(nombre, imagen) VALUES ('Patatas', 'assets/img/carta/patata.jpg');
+INSERT INTO familias(nombre, imagen) VALUES ('Postres', 'assets/img/carta/postre.jpg');
+INSERT INTO familias(nombre, imagen) VALUES ('Sandwichs', 'assets/img/carta/sandwich.png');
+INSERT INTO familias(nombre, imagen) VALUES ('Hamburguesas', 'assets/img/carta/hamburguesa.png');
+INSERT INTO familias(nombre, imagen) VALUES ('Bebidas', 'assets/img/carta/bebida.jpg');
+
 CREATE TABLE horario(
     id                  int(11) auto_increment,
     dia                 varchar(255),

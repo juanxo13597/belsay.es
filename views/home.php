@@ -5,7 +5,7 @@
                     <h1>BELSAY (Fuentes de andalucía)</h1>
                     <h3>YA TIENE SU SITIO EN INTERNET. DESDE AHORA PODRÁS HACER TUS PEDIDOS ONLINE</h3>
 
-                    <table class="table table-hover text-center table-responsive">
+                    <table class="table table-hover text-center table-responsive table-success">
                         <thead>
                             <tr>
                                 <th scope="col">HORARIO</th>
