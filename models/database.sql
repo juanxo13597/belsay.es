@@ -11,18 +11,38 @@ CREATE TABLE familias(
 
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
-INSERT INTO familias(nombre, imagen) VALUES ('Pizzas', 'assets/img/carta/pizza.png');
-INSERT INTO familias(nombre, imagen) VALUES ('Chapatas', 'assets/img/carta/chapata.jpg');
-INSERT INTO familias(nombre, imagen) VALUES ('Roscas', 'assets/img/carta/rosca.jpg');
-INSERT INTO familias(nombre, imagen) VALUES ('Paninis', 'assets/img/carta/panini.jpg');
-INSERT INTO familias(nombre, imagen) VALUES ('Hot Dogs', 'assets/img/carta/hotdog.jpg');
-INSERT INTO familias(nombre, imagen) VALUES ('Bocatas', 'assets/img/carta/bocata.png');
-INSERT INTO familias(nombre, imagen) VALUES ('Ensaladas', 'assets/img/carta/ensalada.jpg');
-INSERT INTO familias(nombre, imagen) VALUES ('Patatas', 'assets/img/carta/patata.jpg');
-INSERT INTO familias(nombre, imagen) VALUES ('Postres', 'assets/img/carta/postre.jpg');
-INSERT INTO familias(nombre, imagen) VALUES ('Sandwichs', 'assets/img/carta/sandwich.png');
-INSERT INTO familias(nombre, imagen) VALUES ('Hamburguesas', 'assets/img/carta/hamburguesa.png');
-INSERT INTO familias(nombre, imagen) VALUES ('Bebidas', 'assets/img/carta/bebida.jpg');
+INSERT INTO familias(nombre, imagen) VALUES 
+('Pizzas', 'assets/img/carta/pizza.png'),
+('Chapatas', 'assets/img/carta/chapata.jpg'),
+('Roscas', 'assets/img/carta/rosca.jpg'),
+('Paninis', 'assets/img/carta/panini.jpg'),
+('Hot Dogs', 'assets/img/carta/hotdog.jpg'),
+('Bocatas', 'assets/img/carta/bocata.png'),
+('Ensaladas', 'assets/img/carta/ensalada.jpg'),
+('Patatas', 'assets/img/carta/patata.jpg'),
+('Postres', 'assets/img/carta/postre.jpg'),
+('Sandwichs', 'assets/img/carta/sandwich.png'),
+('Hamburguesas', 'assets/img/carta/hamburguesa.png'),
+('Bebidas', 'assets/img/carta/bebida.jpg');
+
+CREATE TABLE productos(
+    id                  int(11) auto_increment,
+    nombre              varchar(255),
+    imagen              varchar(255),
+    precio1             varchar(255),
+    precio2             varchar(255),
+    precio3             varchar(255),
+    ingredientes        varchar(255),
+    familia_id          int(11),
+
+    constraint pk_productos primary key(id),
+    constraint fg_productos_familias foreign key(familia_id) references familias(id)
+
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+INSERT INTO productos(nombre, precio1, precio2, precio3, ingredientes, familia_id) VALUES 
+('Milanesa', '5.80', '8.20', '9.00', 'Tomate, orégano, mozzarella y york', 1),
+('Romana', '8.80', '12.10', '13.80', 'Tomate, orégano, mozzarella, aceitunas, alcachofa, champiñon y york', 1);
 
 CREATE TABLE horario(
     id                  int(11) auto_increment,
@@ -34,21 +54,22 @@ CREATE TABLE horario(
 
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
-INSERT INTO horario(dia, horario, tiempo) VALUES ('LUNES', 'CERADO', 'MEDIO DIA');
-INSERT INTO horario(dia, horario, tiempo) VALUES ('MARTES', 'CERADO', 'MEDIO DIA');
-INSERT INTO horario(dia, horario, tiempo) VALUES ('MIERCOLES', 'CERADO', 'MEDIO DIA');
-INSERT INTO horario(dia, horario, tiempo) VALUES ('JUEVES', 'CERADO', 'MEDIO DIA');
-INSERT INTO horario(dia, horario, tiempo) VALUES ('VIERNES', 'CERADO', 'MEDIO DIA');
-INSERT INTO horario(dia, horario, tiempo) VALUES ('SABADO', 'CERADO', 'MEDIO DIA');
-INSERT INTO horario(dia, horario, tiempo) VALUES ('DOMINGO', '13:00 A 16:00', 'MEDIO DIA');
+INSERT INTO horario(dia, horario, tiempo) VALUES 
+('LUNES', 'CERADO', 'MEDIO DIA'),
+('MARTES', 'CERADO', 'MEDIO DIA'),
+('MIERCOLES', 'CERADO', 'MEDIO DIA'),
+('JUEVES', 'CERADO', 'MEDIO DIA'),
+('VIERNES', 'CERADO', 'MEDIO DIA'),
+('SABADO', 'CERADO', 'MEDIO DIA'),
+('DOMINGO', '13:00 A 16:00', 'MEDIO DIA'),
 
-INSERT INTO horario(dia, horario, tiempo) VALUES ('LUNES', '20:00 A 24:00', 'NOCHE');
-INSERT INTO horario(dia, horario, tiempo) VALUES ('MARTES', '20:00 A 24:00', 'NOCHE');
-INSERT INTO horario(dia, horario, tiempo) VALUES ('MIERCOLES', '20:00 A 24:00', 'NOCHE');
-INSERT INTO horario(dia, horario, tiempo) VALUES ('JUEVES', '20:00 A 24:00', 'NOCHE');
-INSERT INTO horario(dia, horario, tiempo) VALUES ('VIERNES', '20:00 A 24:00', 'NOCHE');
-INSERT INTO horario(dia, horario, tiempo) VALUES ('SABADO', '20:00 A 24:00', 'NOCHE');
-INSERT INTO horario(dia, horario, tiempo) VALUES ('DOMINGO', 'CERRADO', 'NOCHE');
+('LUNES', '20:00 A 24:00', 'NOCHE'),
+('MARTES', '20:00 A 24:00', 'NOCHE'),
+('MIERCOLES', '20:00 A 24:00', 'NOCHE'),
+('JUEVES', '20:00 A 24:00', 'NOCHE'),
+('VIERNES', '20:00 A 24:00', 'NOCHE'),
+('SABADO', '20:00 A 24:00', 'NOCHE'),
+('DOMINGO', 'CERRADO', 'NOCHE');
 
 CREATE TABLE usuarios(
     id                  int(11) auto_increment,
