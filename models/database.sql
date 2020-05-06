@@ -11,6 +11,7 @@ CREATE TABLE familias(
 
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
+-- familias
 INSERT INTO familias(nombre, imagen) VALUES 
 ('Pizzas', 'assets/img/carta/pizza.png'),
 ('Chapatas', 'assets/img/carta/chapata.jpg'),
@@ -20,7 +21,7 @@ INSERT INTO familias(nombre, imagen) VALUES
 ('Bocatas', 'assets/img/carta/bocata.png'),
 ('Ensaladas', 'assets/img/carta/ensalada.jpg'),
 ('Patatas', 'assets/img/carta/patata.jpg'),
-('Postres', 'assets/img/carta/postre.jpg'),
+-- ('Postres', 'assets/img/carta/postre.jpg'),
 ('Sandwichs', 'assets/img/carta/sandwich.png'),
 ('Hamburguesas', 'assets/img/carta/hamburguesa.png'),
 ('Bebidas', 'assets/img/carta/bebida.jpg');
