@@ -29,9 +29,9 @@ CREATE TABLE productos(
     id                  int(11) auto_increment,
     nombre              varchar(255),
     imagen              varchar(255),
-    precio1             varchar(255),
-    precio2             varchar(255),
-    precio3             varchar(255),
+    precio1             decimal(11,2),
+    precio2             decimal(11,2),
+    precio3             decimal(11,2),
     ingredientes        varchar(255),
     familia_id          int(11),
 
@@ -40,9 +40,102 @@ CREATE TABLE productos(
 
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
+-- pizzas
 INSERT INTO productos(nombre, precio1, precio2, precio3, ingredientes, familia_id) VALUES 
-('Milanesa', '5.8', '8.2', '9', 'Tomate, orégano, mozzarella y york', 1),
-('Romana', '8.8', '12.1', '13.8', 'Tomate, orégano, mozzarella, aceitunas, alcachofa, champiñon y york', 1);
+('Milanesa', 5.8, 8.2, 9, 'Tomate, orégano, mozzarella y york', 1),
+('Romana', 8.8, 12.1, 13.8, 'Tomate, orégano, mozzarella, aceitunas, alcachofa, champiñon y york.', 1),
+('Veneciana', 7.8, 10.8, 12.2, 'Tomate, orégano mozzarella, salami, salchichas y york.', 1),
+('Napolitana', 7.8, 10.8, 12.2, 'Tomate, orégano, mozzarella, jamón serrano, champiñón y beicon.', 1),
+('Parmesana', 7.8, 10.8, 12.2, 'Tomate, orégano, mozzarella, mezcla mágica de quesos.', 1),
+('Genovesa', 7.8, 10.8, 12.2, 'Tomate, orégano, mozzarella, gamba, anchoa y champiñón.', 1),
+('Siciliana', 7.8, 10.8, 12.2, 'Tomate, orégano, mozzarella, champiñon, atún y york.', 1),
+('Especialidad', 8.8, 12.1, 13.8, 'Tomate natural, roquefort, anchoa y ternera.', 1),
+('Americana', 7.8, 10.8, 12.2, 'Salsa barbacoa, ternera, beicon y cebolla.', 1),
+('Hawaiana', 7.8, 10.8, 12.2, 'Tomate, orégano, extra de mozzarella, piña y jamón.', 1),
+('De la ria', 7.8, 10.8, 12.2, 'Mejillones, atún y gambas.', 1),
+('Varonesa', 8.8,  12.1, 13.8, 'Champiñones, york, peperoni y extra de mozarella.', 1),
+('Alessandriana', 8.8, 12.1, 13.8, 'Peperoni, pimiento verde, cebolla y beicon.', 1),
+('Toscana', 7.8, 10.8, 12.2, 'Jamón, Atún y gambas.', 1),
+('Kebab', 8.8, 12.1, 13.8, 'Carne de pollo de kebab y salsa white.', 1),
+('Piamonte', 6.8, 9.5, 10.6, 'Salsicha, beicon y salsa gaucha.', 1);
+
+-- chapatas
+INSERT INTO productos(nombre, precio2, precio3, ingredientes, familia_id) VALUES 
+('Charra', 4.15, 7.5, 'Chapata base y york.', 2),
+('Ranchera', 4.85, 8.5, 'Chapata base, champiñón y york.', 2),
+('Tijuana', 4.85, 8.5, 'Chapata base, jamón serrano y atún.', 2),
+('Maya', 5.55, 9.5, 'Chapata base, mezcla mágica de quesos.', 2),
+('Mariachi', 5.55, 9.5, 'Chapata base, salmón, gambas y champiñón.', 2),
+('Mexicana', 5.55, 9.5, 'Chapata base, beicon, atún y champiñón.', 2);
+
+-- roscas
+INSERT INTO productos(nombre, precio2, ingredientes, familia_id) VALUES 
+('Ibérica', 7, 'Chapata base y york.', 3);
+
+-- paninis
+INSERT INTO productos(nombre, precio2, ingredientes, familia_id) VALUES 
+('Atlántico', 2.1, 'Panini base y jamón york.', 4),
+('Pacífico', 3.1, 'Panini base, alcachofa, champiñón y york.', 4),
+('Índico', 3.1, 'Panini base, jamón serrano, champiñón y beicon', 4),
+('Báltico', 3.1, 'Panini base, salami, salchichas y york.', 4),
+('Mediterráneo', 3.1, 'Panini base, atún y champiñón.', 4),
+('Cantábrico', 3.1, 'Panini base, gambas, anchoas y champiñón.', 4),
+('Maya', 3.1, 'Panini base y mágica mezcla de quesos.', 4);
+
+-- hot dog
+INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
+('Perrito caliente', 'Pan y salsicha.', 1.85, 5),
+('Perrito bel', 'Queso, salsicha y beicon.', 2.25, 5),
+('Perrito say', 'Tortilla francesa y salchica.', 2.15, 5),
+('Perrito completo', 'Queso, salsicha, beicon y tortilla.', 2.45, 5),
+('Especial hot dog', 'Salsicha, aros de cebolla, tomate y tortilla.', 2.75, 5),
+('Perrito picantón', 'Salsicha, aros de cebolla y salsa brava.', 2.25, 5),
+('Perrito sabroson', 'Salsicha, beicon, cebolla y salsa barbacoa.', 2.4, 5);
+
+-- bocatas
+INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
+('Manchego', 'Anchoa, queso y pimiento.', 3.4, 6),
+('Gallego', 'Atún, huevo, pimiento y mahonesa.', 3.4, 6),
+('Catalán', 'Jamón serrano, tomate y aceite.', 2.8, 6),
+('Andaluz', 'Tortilla o lomo.', 2.8, 6),
+('Serranito', 'Lomo, jamón serrano y pimiento.', 3.4, 6),
+('Freed burguer', 'Hamburguesa frita con salsa barbacoa y cebolla.', 3.4, 6),
+('Caribeño', 'Palometa ahumada, roquefort o queso fresco.', 3.65, 6),
+('Levantino', 'Pechuga de pollo, lechuga, tomate y mahonesa.', 3.65, 6),
+('Murciano', 'Lechuga, tomate, huevo, mahonesa, espárrago y queso fresco.', 3.55, 6),
+('Frankfurt', 'Salsichas, lechuga, tomate y mahonesa', 3.45, 6),
+('Tortilla de patatas', 'Tortilla de patatas con beicon o pimiento morrón', 3.15, 6),
+('Extremeño', 'Beicon, escalope de pollo y queso fundido', 3.65, 6),
+('Asturiano', 'Beicon y queso', 3.1, 6),
+('Marinero', 'Lechuga, tomate, atún, rabanitos de mar y mahonesa', 3.4, 6),
+('Vasco', 'Lomo, beicon, salsa barbacoa y tomate natural', 3.4, 6),
+('Aragonés', 'Jamón york y queso', 2.8, 6),
+('Riojano', 'Lomo y queso fundido', 3.4, 6),
+('Castellano', 'Lomo, beicon y cebolla', 3.4, 6),
+('Sanluqueño', 'Gambas a la plancha en salsa ali-oli', 3.65, 6),
+('Sevillano', 'Salsa de salmorejo, jamón y huevo duro rallado', 3.4, 6),
+('Zamorano', 'Lomo mechado, cebolla frita y salsa al whisky', 3.65, 6),
+('Segoviano', 'Lomo, jamón y salsa verde', 3.4, 6);
+
+
+-- ensaladas
+INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
+('De la huerta', 'Lechuga, tomate y cebolla', 2.6, 7),
+('Mixta', 'Lechuga, tomate, cebolla, huevo, atún, aceitunas y espárragos', 2.6, 7),
+('Parisina', 'Lechuga, tomate, pollo, york, queso, zanahoria, huevo y salsa rosa o roquefort', 3.45, 7),
+('Niçoise', 'Lechuga, tomate, atún, york, queso, espárrago, palmitos y salsa rosa o roquefort', 3.7, 7),
+('Tropical', 'Lechuga, tomate, gambas, brotes de soja, mazorquitas, piña, delicias de mar y salsa rosa', 3.7, 7),
+('Del mar', 'Lechuga, gambas, rabanitos de mar y salsa rosa', 3.45, 7),
+('De pimientos', 'Pimientos rojos, rabanitos de mar, cebollita, mejillones, gambas y aceitunas verdes', 3.6, 7),
+('Italiana', 'Pasta, jamón cocido, tomate, aceitunas, tortilla y queso', 3.7, 7),
+('Burguesa', 'Lechuga, piña, queso fresco, jamón york y un suave toque de mahonesa', 3.7, 7),
+('Cesar', 'Lechuga, york, pollo y picatostes con salsa cesar', 3.7, 7);
+
+-- patatas
+INSERT INTO productos(nombre, precio2, precio3, familia_id) VALUES
+('Golden', 2.1, 0 , 8),
+('Normales', 1.3, 1.6, 8);
+
 
 CREATE TABLE horario(
     id                  int(11) auto_increment,
