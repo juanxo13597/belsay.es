@@ -50,6 +50,9 @@
 
 <div class="text-light text-center mt-5">
     <h1>95 483 81 00</h1>
+    <h1>64 944 98 32</h1>
+
+    <small class="text-light">Calle Manuel de Falla, 41420 Fuentes de Andalucía</small>
 </div>
 
 </div>

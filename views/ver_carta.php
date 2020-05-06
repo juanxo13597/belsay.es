@@ -1,4 +1,6 @@
-<center><input onClick='javascript:window.history.back();'' type='button' name='Submit' value='Volver' class='btn btn-outline-success mb-3' />
+<center> 
+<input onClick='javascript:window.history.back();'' type='button' name='Submit' value='Volver' class='btn btn-outline-success mb-3' />
+<h1 class="display-4"><?=$nombre_familia['nombre']?></h1>
 
 <div class="card-columns">
 
@@ -25,7 +27,7 @@
             }
 
             if(!is_null($row['ingredientes'])){
-                $ingredientes = "<u>Ingredientes:</u> ". $row['ingredientes'];
+                $ingredientes = "<u>Ingredientes:</u><br>". $row['ingredientes'];
             }else{
                 $ingredientes = null;
             }

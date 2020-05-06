@@ -137,6 +137,69 @@ INSERT INTO productos(nombre, precio2, precio3, familia_id) VALUES
 ('Golden', 2.1, 0 , 8),
 ('Normales', 1.3, 1.6, 8);
 
+-- sanwichs
+INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
+('Inglés', 'Jamón york y queso', 1.95, 9),
+('Irlandés', 'Lechuga, tomate, espárrago, huevo y mahonesa', 2.6, 9),
+('Croque', 'Jamón york, bechamel y emmental', 3.05, 9),
+('Holandés', 'Jamón york, queso, huevo y beicon', 2.5, 9),
+('Español', 'Jamón serrano y tortilla', 2.4, 9),
+('Francés', 'Jamón york, queso y tortilla', 2.45, 9),
+('Italiano', 'Lechuga, tomate, queso fresco y emmental', 2.8, 9),
+('Noruego', 'Atún, pimiento morrón y huevo duro', 3, 9),
+('Alemán', 'Lechuga, tomate, atún, rabanitos de mar y salsa rosa', 2.9, 9),
+('Especial belsay', 'Lechuga, tomate, atún, mahonesa, york, queso, beicon y huevo (dos pisos)', 3.7, 9),
+('Portugues', 'Tomate, beicon y tiras de escalope de pollo', 3.05, 9),
+('Belga', 'Palometa ahumada y salsa roquefort', 3.1, 9),
+('Sueco', 'Lechuga, tomate, gambas a la plancha y salsa rosa', 3, 9),
+('Polaco', 'Lomo a la plancha y salsa roquefort', 2.95, 9),
+('Húngaro', 'Queso fresco, anchoas y pimiento morrón', 2.9, 9),
+('Austríaco', 'Lechuga, tomate, atún, huevo duro, aros de cebolla fresca y un legero toque de aceite de oliva', 2.6, 9);
+
+-- hamburguesas
+INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
+('Carolina', 'Carne, lechuga y tomate', 1.9, 10),
+('Florida', 'Carne, queso, lechuga y tomate', 2.1, 10),
+('Indiana', 'Carne, lechuga, tomate y huevo', 2.3, 10),
+('Arizona', 'Carne, lechuga, tomate, queso, beicon y huevo', 2.8, 10),
+('Montana', '2 carnes, lechuga, tomate, huevo, queso y beicon', 3.1, 10),
+('Nevada', 'Pollo, lechuga y mahonesa', 2.9, 10),
+('California', 'Carne, lechuga, tomate, cebolla y maíz', 2.3, 10),
+('Tejana', 'Carne, lechuga, tomate, cebolla, beicon y salsa barbacoa', 2.5, 10),
+('De buey', 'Queso cheddar, beicon y cebolla', 5.5, 10);
+
+-- bebidas
+INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
+('Coca-cola', 'Lata 33CL', 1.3, 11),
+('Coca-Cola light', 'Lata 33CL', 1.3, 11),
+('Coca-Cola zero', 'Lata 33CL', 1.3, 11),
+('Coca-Cola sin cafeina', 'Lata 33CL', 1.3, 11),
+('Aquarius', 'Lata 33CL', 1.3, 11),
+('Nestea', 'Lata 33CL', 1.3, 11),
+('Sprite', 'Lata 33CL', 1.3, 11),
+('Fanta limón', 'Lata 33CL', 1.3, 11),
+('Fanta naranja', 'Lata 33CL', 1.3, 11),
+('Cerveza cruz campo', 'Lata 33CL', 1.3, 11),
+('Cerveza cruz campo', '1 litro', 2, 11),
+('Cerveza cruz campo sin alcohol', 'Lata 33CL', 1.3, 11),
+('Agua', 'Botella 50CL', 0.9, 11),
+('Zumo melocotón', null, 1.2, 11),
+('Zumo piña', null, 1.2, 11),
+('Coca-cola', '1 litro', 1.7, 11),
+('Coca-cola', '2 litro', 2.2, 11),
+('Coca-cola zero', '1 litro', 1.7, 11),
+('Coca-cola zero', '2 litro', 2.2, 11),
+('Coca-cola light', '1 litro', 1.7, 11),
+('Coca-cola light', '2 litro', 2.2, 11),
+('Coca-cola sin cafeina', '1 litro', 1.7, 11),
+('Coca-cola sin cafeina', '2 litro', 2.2, 11),
+('Sprite', '1 litro', 1.7, 11),
+('Sprite', '2 litro', 2.2, 11),
+('Fanta limón', '1 litro', 1.7, 11),
+('Fanta limón', '2 litro', 2.2, 11),
+('Fanta naranja', '1 litro', 1.7, 11),
+('Fanta naranja', '2 litro', 2.2, 11);
+
 
 CREATE TABLE horario(
     id                  int(11) auto_increment,

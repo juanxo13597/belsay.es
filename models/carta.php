@@ -13,6 +13,11 @@ class carta extends db{
         return $result = $this->conexion->query($sql);
     }
 
+    public function nombre_de_familia($id){
+        $sql = "select nombre from familias where id = '$id'";
+        return $result = $this->conexion->query($sql);
+    }
+
 
 
 }

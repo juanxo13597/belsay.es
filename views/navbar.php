@@ -15,7 +15,7 @@
                         <a class="nav-link font-weight-bold" href="?pag=carta">Carta</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href="#">Localización</a>
+                        <a class="nav-link font-weight-bold" href="?pag=localizacion">Localización</a>
                     </li>
                 </ul>
                 <!-- fin menu izquierda -->
