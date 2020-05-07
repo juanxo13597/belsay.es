@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 function navegacion(){
         if(!isset($_GET['pag'])){

@@ -21,7 +21,7 @@ class cliente extends db{
         if($this->password1 == $this->password2){
             // la password 1 y la 2 son iguales
 
-            $pwd = hash('sha256', 'sha256');
+            $pwd = hash('sha256', $this->password1);
             
 
             $sql = "INSERT INTO clientes(email, dni, password, nombre, apellidos, telefono, calle, numero, localidad) VALUES('$this->email', '$this->dni', '$pwd', '$this->nombre', '$this->apellidos', '$this->telefono', '$this->calle', '$this->numero', '$this->localidad')";
@@ -65,6 +65,39 @@ class cliente extends db{
 
         
     }
+
+
+    public function iniciar_sesion(){
+        $pwd = hash('sha256', $this->password1);
+
+        $sql = "select * from clientes where email = '$this->email' && password = '$pwd'";
+        $result = $this->conexion->query($sql);
+        if($result->num_rows>0){
+            while($row = $result->fetch_assoc()){
+                $_SESSION['login'] = $row;
+                $_SESSION['login']['status'] = 1;
+                $_SESSION['login']['pwd'] = $this->password1;
+
+                $data = [
+                    'status' => 'success',
+                    'message' => 'Inicio de sesion correcto.'
+                ];
+            }
+        }else{
+            $_SESSION['login']['status'] = 0;
+            $data = [
+                'status' => 'error',
+                'message' => 'Email y/o contraseñas inválidas.',
+                'email' => $this->email,
+                'password' => $pwd
+            ];
+        }
+        
+        return $data;
+    }
+
+
+
 
 
 }

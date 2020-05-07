@@ -28,10 +28,12 @@
                             Zona Cliente
                         </a>
                         <div class="dropdown-menu">
-                            <form class="px-4 py-3">
+
+                        <?php if($_SESSION['login']['status'] == 0 || $_SESSION['login']['status'] == NULL){ ?>
+                            <form class="px-4 py-3" method="POST">
                                 <div class="form-group">
                                     <label for="email">Email</label>
-                                    <input type="email" class="form-control" placeholder="email@belsay.es">
+                                    <input type="email" class="form-control" name="email" placeholder="email@belsay.es">
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Contraseña</label>
@@ -39,10 +41,17 @@
                                         placeholder="Contraseña">
                                 </div>
 
-                                <button type="submit" class="btn btn-outline-success">Entrar</button>
+                                <button type="submit" class="btn btn-outline-success" name="inicio_sesion">Entrar</button>
                             </form>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item text-success" href="?pag=registro">¿Aun no eres Cliente? Registrate YA.</a>
+
+                        <?php }else{ ?>
+                            <a class="dropdown-item " href="#">Perfil</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="?pag=cerrar_sesion">Salir</a>
+
+                        <?php } ?>
                         </div>
                     </li>
                 </ul>
