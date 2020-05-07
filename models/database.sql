@@ -174,17 +174,6 @@ INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
 ('Coca-Cola light', 'Lata 33CL', 1.3, 11),
 ('Coca-Cola zero', 'Lata 33CL', 1.3, 11),
 ('Coca-Cola sin cafeina', 'Lata 33CL', 1.3, 11),
-('Aquarius', 'Lata 33CL', 1.3, 11),
-('Nestea', 'Lata 33CL', 1.3, 11),
-('Sprite', 'Lata 33CL', 1.3, 11),
-('Fanta limón', 'Lata 33CL', 1.3, 11),
-('Fanta naranja', 'Lata 33CL', 1.3, 11),
-('Cerveza cruz campo', 'Lata 33CL', 1.3, 11),
-('Cerveza cruz campo', '1 litro', 2, 11),
-('Cerveza cruz campo sin alcohol', 'Lata 33CL', 1.3, 11),
-('Agua', 'Botella 50CL', 0.9, 11),
-('Zumo melocotón', null, 1.2, 11),
-('Zumo piña', null, 1.2, 11),
 ('Coca-cola', '1 litro', 1.7, 11),
 ('Coca-cola', '2 litro', 2.2, 11),
 ('Coca-cola zero', '1 litro', 1.7, 11),
@@ -193,12 +182,24 @@ INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
 ('Coca-cola light', '2 litro', 2.2, 11),
 ('Coca-cola sin cafeina', '1 litro', 1.7, 11),
 ('Coca-cola sin cafeina', '2 litro', 2.2, 11),
-('Sprite', '1 litro', 1.7, 11),
-('Sprite', '2 litro', 2.2, 11),
+('Fanta limón', 'Lata 33CL', 1.3, 11),
 ('Fanta limón', '1 litro', 1.7, 11),
 ('Fanta limón', '2 litro', 2.2, 11),
+('Fanta naranja', 'Lata 33CL', 1.3, 11),
 ('Fanta naranja', '1 litro', 1.7, 11),
-('Fanta naranja', '2 litro', 2.2, 11);
+('Fanta naranja', '2 litro', 2.2, 11),
+('Aquarius', 'Lata 33CL', 1.3, 11),
+('Nestea', 'Lata 33CL', 1.3, 11),
+('Sprite', 'Lata 33CL', 1.3, 11),
+('Sprite', '1 litro', 1.7, 11),
+('Sprite', '2 litro', 2.2, 11),
+('Cerveza cruz campo', 'Lata 33CL', 1.3, 11),
+('Cerveza cruz campo', '1 litro', 2, 11),
+('Cerveza cruz campo sin alcohol', 'Lata 33CL', 1.3, 11),
+('Zumo melocotón', null, 1.2, 11),
+('Zumo piña', null, 1.2, 11),
+('Agua', 'Botella 50CL', 0.9, 11);
+
 
 
 CREATE TABLE horario(
@@ -241,14 +242,32 @@ CREATE TABLE clientes(
 
     id                  int(11) auto_increment,
     email               varchar(255),
+    dni                 varchar(255),
     password            varchar(255),
     nombre              varchar(255),
     apellidos           varchar(255),
     telefono            varchar(255),
-    direccion           varchar(255),
+    calle               varchar(255),
+    numero              varchar(255),
+    localidad           varchar(255),
+    fecha_registro      timestamp,
 
     constraint pk_clientes primary key(id),
-    constraint uniq_clientes unique(email)
+    constraint uniq_clientes_email unique(email),
+    constraint uniq_clientes_dni unique(dni)
+
+)ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+CREATE TABLE log_clientes(
+
+    id                  int(11) auto_increment,
+    cliente_id          int(11),
+    fecha               timestamp,
+    accion              varchar(255),
+    ip                  varchar(255),
+
+    constraint pk_log_clientes primary key(id),
+    constraint fk_log_clientes_id foreign key(cliente_id) references clientes(id)
 
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 

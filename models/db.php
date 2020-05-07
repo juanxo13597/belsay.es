@@ -12,6 +12,7 @@ class db{
         $this->conexion->set_charset("utf8");
     }
 
+
 }
 
 ?>

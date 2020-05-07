@@ -42,7 +42,7 @@
                                 <button type="submit" class="btn btn-outline-success">Entrar</button>
                             </form>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item text-success" href="#">¿Aun no eres Cliente? Registrate YA.</a>
+                            <a class="dropdown-item text-success" href="?pag=registro">¿Aun no eres Cliente? Registrate YA.</a>
                         </div>
                     </li>
                 </ul>
