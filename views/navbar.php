@@ -29,7 +29,7 @@
                         </a>
                         <div class="dropdown-menu">
 
-                        <?php if(!isset($_SESSION['login']['status']) || $_SESSION['login']['status'] = 0){ ?>
+                        <?php if(!isset($_SESSION['login']['status']) || $_SESSION['login']['status'] == 0){ ?>
                             <form class="px-4 py-3" method="POST">
                                 <div class="form-group">
                                     <label for="email">Email</label>
