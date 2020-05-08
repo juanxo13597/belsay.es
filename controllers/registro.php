@@ -1,7 +1,7 @@
 <?php
 require_once("models/cliente.php");
 $registro = new cliente();
-
+$message = null;
 
 
 if(isset($_POST['registrar'])){
@@ -10,7 +10,6 @@ if(isset($_POST['registrar'])){
     $registro->dni = $_POST['dni'];
     $registro->nombre = $_POST['nombre'];
     $registro->apellidos = $_POST['apellidos'];
-    $registro->direccion = $_POST['direccion'];
     $registro->telefono = $_POST['telefono'];
     $registro->password1 = $_POST['password1'];
     $registro->password2 = $_POST['password2'];
