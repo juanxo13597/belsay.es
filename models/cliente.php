@@ -97,6 +97,30 @@ class cliente extends db{
     }
 
 
+    public function datos_cliente($id){
+        $sql = "select * from clientes where id = '$id'";
+        $result = $this->conexion->query($sql);
+
+        return $result;
+    }
+
+    public function cambiar_datos_perfil($id){
+        $sql = "UPDATE clientes SET email='$this->email',
+        dni='$this->dni',
+        nombre='$this->nombre',
+        apellidos='$this->apellidos',
+        telefono='$this->telefono',
+        calle='$this->calle',
+        numero='$this->numero',
+        localidad='$this->localidad'
+        WHERE id=$id";
+
+        $result = $this->conexion->query($sql);
+
+        return $result;
+    }
+
+
 
 
 
