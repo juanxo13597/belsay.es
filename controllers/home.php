@@ -16,6 +16,13 @@ if(isset($_POST['inicio_sesion'])){
     }
 }
 
+if($inicio_sesion['estado'] == 'success'){
+    $message = "<div class='alert alert-success'>".$inicio_sesion['message']."</div>";
+}elseif($inicio_sesion['estado'] == 'error'){
+    $message = "<div class='alert alert-danger'>".$inicio_sesion['message']."</div>";
+}else{
+    $message = null;
+}
 
 require_once("views/home.php");
 ?>
