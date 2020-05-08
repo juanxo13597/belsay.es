@@ -79,14 +79,14 @@ class cliente extends db{
                 $_SESSION['login']['pwd'] = $this->password1;
 
                 $data = [
-                    'status' => 'success',
+                    'estado' => 'success',
                     'message' => 'Inicio de sesion correcto.'
                 ];
             }
         }else{
             $_SESSION['login']['status'] = 0;
             $data = [
-                'status' => 'error',
+                'estado' => 'error',
                 'message' => 'Email y/o contraseñas inválidas.',
                 'email' => $this->email,
                 'password' => $pwd

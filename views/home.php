@@ -1,4 +1,4 @@
-
+<?=$message?>
 
                 <center>
                     <img src="assets/img/logo.png" class="img-fluid" alt="logo">

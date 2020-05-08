@@ -1,5 +1,6 @@
 <?php
 require_once("controllers/includes.php");
+error_reporting(0);
 ?>
 <!DOCTYPE html>
 <html lang="en">
