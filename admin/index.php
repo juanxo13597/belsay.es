@@ -1,5 +1,6 @@
 <?php
 require_once("inc/login.php");
+require_once("controllers/navegacion.php");
 
 ?>
 <!DOCTYPE html>
@@ -26,7 +27,7 @@ require_once("inc/login.php");
             </div>
 
             <!-- container -->
-            <div class="col-9 bg-light rounded ml-1">b</div>
+            <div class="col-9 bg-light rounded ml-1"><?php require_once("controllers/".navegacion().".php"); ?></div>
         </div>
 
     </div>
