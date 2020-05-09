@@ -1,3 +1,7 @@
+<?php
+require_once("inc/login.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 

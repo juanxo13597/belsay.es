@@ -238,6 +238,8 @@ CREATE TABLE usuarios(
 
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
+INSERT INTO usuarios(usuario, password) VALUES('admin', 'admin');
+
 CREATE TABLE clientes(
 
     id                  int(11) auto_increment,

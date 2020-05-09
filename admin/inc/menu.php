@@ -18,4 +18,8 @@
             <a class="nav-link text-success" href="#">LOG</a>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link text-danger" href="inc/salir.php">SALIR</a>
+        </li>
+
     </ul>
