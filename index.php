@@ -27,13 +27,13 @@ require_once("controllers/includes.php");
 
         <!-- contenido ofertas y main -->
         <div class="row border border-success m-0 p-0 bg-white">
-             <!-- box oferta -->
-           <?php require_once("views/ofertas.php"); ?>
-           <!-- fin box oferta -->
+            <!-- box oferta -->
+            <?php require_once("views/ofertas.php"); ?>
+            <!-- fin box oferta -->
 
             <!-- box main -->
             <div class="col-9 border-left border-success p-3 pb-5">
-            <?php require_once("controllers/".navegacion().".php"); ?>
+                <?php require_once("controllers/".navegacion().".php"); ?>
             </div>
             <!-- fin box main -->
         </div>
@@ -41,19 +41,19 @@ require_once("controllers/includes.php");
         <!-- fin conectnido ofertas y main -->
 
 
-
+    <!-- copyright -->
+    <footer id="sticky-footer" class="py-3 bg-light text-success-50 mb-5 rounded-bottom border-left border-right border-bottom border-success">
+        <div class="container text-center">
+            <small><a class="text-success" href="index.php">pizzeriabelsay.es</a> | <a class="text-success"
+                    href="http://gesimar.es/">By Gesimar Informática</a></small>
+        </div>
+    </footer>
+    <!-- fin copyright -->
 
     </div>
     <!-- fin container general -->
 
-    <!-- copyright -->
-    <div class="align-bottom mt-2">
-        <small class="text-center">
-            <p><a class="text-success" href="index.php">pizzeriabelsay.es</a> | <a class="text-success"
-                    href="http://gesimar.es/">By Gesimar Informática</a></p>
-        </small>
-    </div>
-    <!-- fin copyright -->
+    
 
 
 
