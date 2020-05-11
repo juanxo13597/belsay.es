@@ -1,6 +1,7 @@
 <?=$message?>
 
                 <center>
+                    <?=$message?>
                     <img src="assets/img/logo.png" class="img-fluid" alt="logo">
                     <h1>BELSAY (Fuentes de andalucía)</h1>
                     <h3>YA TIENE SU SITIO EN INTERNET. DESDE AHORA PODRÁS HACER TUS PEDIDOS ONLINE</h3>

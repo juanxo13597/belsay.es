@@ -238,6 +238,8 @@ CREATE TABLE usuarios(
 
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
+INSERT INTO usuarios(usuario, password) VALUES('admin', 'admin');
+
 CREATE TABLE clientes(
 
     id                  int(11) auto_increment,
@@ -262,6 +264,7 @@ CREATE TABLE log_clientes(
 
     id                  int(11) auto_increment,
     cliente_id          int(11),
+    email               varchar(255),
     fecha               timestamp,
     accion              varchar(255),
     ip                  varchar(255),

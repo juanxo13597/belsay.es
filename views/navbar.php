@@ -47,7 +47,7 @@
                             <a class="dropdown-item text-success" href="?pag=registro">¿Aun no eres Cliente? Registrate YA.</a>
 
                         <?php }else{ ?>
-                            <a class="dropdown-item " href="#">Perfil</a>
+                            <a class="dropdown-item " href="?pag=perfil">Perfil</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item text-danger" href="?pag=cerrar_sesion">Salir</a>
 
