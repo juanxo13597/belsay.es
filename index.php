@@ -11,7 +11,10 @@ require_once("controllers/includes.php");
     <script src="assets/js/main.js"></script>
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/datatables.min.css">
+    <script type="text/javascript" src="assets/js/datatables.min.js"></script>
     <title>Pizzeria Belsay</title>
 </head>
 
@@ -41,19 +44,20 @@ require_once("controllers/includes.php");
         <!-- fin conectnido ofertas y main -->
 
 
-    <!-- copyright -->
-    <footer id="sticky-footer" class="py-3 bg-light text-success-50 mb-5 rounded-bottom border-left border-right border-bottom border-success">
-        <div class="container text-center">
-            <small><a class="text-success" href="index.php">pizzeriabelsay.es</a> | <a class="text-success"
-                    href="http://gesimar.es/">By Gesimar Informática</a></small>
-        </div>
-    </footer>
-    <!-- fin copyright -->
+        <!-- copyright -->
+        <footer id="sticky-footer"
+            class="py-3 bg-light text-success-50 mb-5 rounded-bottom border-left border-right border-bottom border-success">
+            <div class="container text-center">
+                <small><a class="text-success" href="index.php">pizzeriabelsay.es</a> | <a class="text-success"
+                        href="http://gesimar.es/">By Gesimar Informática</a></small>
+            </div>
+        </footer>
+        <!-- fin copyright -->
 
     </div>
     <!-- fin container general -->
 
-    
+
 
 
 

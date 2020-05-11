@@ -13,7 +13,10 @@ require_once("controllers/navegacion.php");
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/jquery-3.4.1.min.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../assets/js/dataTables.bootstrap4.min.js"></script>
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/dataTables.bootstrap.min.css">
     <title>Admin - Belsay</title>
 </head>
 
