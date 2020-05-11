@@ -1,5 +1,6 @@
 <?php
 require_once("models/user.php");
+error_reporting(0);
 ?>
 
 
