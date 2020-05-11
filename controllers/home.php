@@ -14,6 +14,14 @@ if(isset($_POST['inicio_sesion'])){
     if($inicio_sesion['status'] = 1){
         echo "<meta http-equiv='refresh' content='1; url=index.php'>";
     }
+
+
+    if($inicio_sesion['estado'] == 'success'){
+        $message = "<div class='alert alert-success'>".$inicio_sesion['message']."</div>";
+    }elseif($inicio_sesion['estado'] == 'error'){
+        $message = "<div class='alert alert-danger'>".$inicio_sesion['message']."</div>";
+    }
+
 }
 
 if($inicio_sesion['estado'] == 'success'){
@@ -23,6 +31,8 @@ if($inicio_sesion['estado'] == 'success'){
 }else{
     $message = null;
 }
+
+
 
 require_once("views/home.php");
 ?>

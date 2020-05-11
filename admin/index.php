@@ -1,6 +1,7 @@
 <?php
 require_once("inc/login.php");
 require_once("controllers/navegacion.php");
+error_reporting(0);
 
 ?>
 <!DOCTYPE html>
