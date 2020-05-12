@@ -1,51 +1,44 @@
 <table id="familias" class="table table-light">
     <thead class="thead-light">
         <tr>
-            <th>name</th>
-            <th>name</th>
-            <th>name</th>
-            <th>name</th>
-            <th>name</th>
-            <th>name</th>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Imagen</th>
+            <th>Acción</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <?php
+                if($result_familias->num_rows>0){
+                    while($row = $result_familias->fetch_assoc()){
+                        echo "<tr>";
+                        echo "<td>".$row['id']."</td>";
+                        echo "<td>".$row['nombre']."</td>";
+                        echo "<td><img src='../".$row['imagen']."' alt='".$row['nombre']."' width='100' heigt='100'></td>";
+                        echo "<td>accion</td>";
+                        echo "</tr>";
+                    }
+                }
+            ?>
         </tr>
     </tbody>
 </table>
 
 
 <script>
-
-var data = [
-    [
-        "Tiger Nixon",
-        "System Architect",
-        "Edinburgh",
-        "5421",
-        "2011/04/25",
-        "$3,120"
-    ],
-    [
-        "Garrett Winters",
-        "Director",
-        "Edinburgh",
-        "8422",
-        "2011/07/25",
-        "$5,300"
-    ]
-]
-
-
-$('#familias').DataTable( {
-    data: data
-} );
+    $(document).ready(function () {
+        $('#familias').DataTable({
+            "order": [
+                [0, "desc"]
+            ],
+            "lengthMenu": [
+                [25, 50, 100, -1],
+                [25, 50, 100, "Ver Todo"]
+            ],
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+            }
+        });
+    });
 </script>
-Name	Position	Office	Extn.	Start date	Salary
