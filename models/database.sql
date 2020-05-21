@@ -69,48 +69,48 @@ INSERT INTO productos(nombre, precio2, precio3, ingredientes, familia_id) VALUES
 
 -- paninis
 INSERT INTO productos(nombre, precio2, ingredientes, familia_id) VALUES 
-('Atlántico', 2.1, 'Panini base y jamón york.', 4),
-('Pacífico', 3.1, 'Panini base, alcachofa, champiñón y york.', 4),
-('Índico', 3.1, 'Panini base, jamón serrano, champiñón y beicon', 4),
-('Báltico', 3.1, 'Panini base, salami, salchichas y york.', 4),
-('Mediterráneo', 3.1, 'Panini base, atún y champiñón.', 4),
-('Cantábrico', 3.1, 'Panini base, gambas, anchoas y champiñón.', 4),
-('Maya', 3.1, 'Panini base y mágica mezcla de quesos.', 4);
+('Atlántico', 2.1, 'Panini base y jamón york.', 3),
+('Pacífico', 3.1, 'Panini base, alcachofa, champiñón y york.', 3),
+('Índico', 3.1, 'Panini base, jamón serrano, champiñón y beicon', 3),
+('Báltico', 3.1, 'Panini base, salami, salchichas y york.', 3),
+('Mediterráneo', 3.1, 'Panini base, atún y champiñón.', 3),
+('Cantábrico', 3.1, 'Panini base, gambas, anchoas y champiñón.', 3),
+('Maya', 3.1, 'Panini base y mágica mezcla de quesos.', 3);
 
 -- hot dog
 INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
-('Perrito caliente', 'Pan y salsicha.', 1.85, 5),
-('Perrito bel', 'Queso, salsicha y beicon.', 2.25, 5),
-('Perrito say', 'Tortilla francesa y salchica.', 2.15, 5),
-('Perrito completo', 'Queso, salsicha, beicon y tortilla.', 2.45, 5),
-('Especial hot dog', 'Salsicha, aros de cebolla, tomate y tortilla.', 2.75, 5),
-('Perrito picantón', 'Salsicha, aros de cebolla y salsa brava.', 2.25, 5),
-('Perrito sabroson', 'Salsicha, beicon, cebolla y salsa barbacoa.', 2.4, 5);
+('Perrito caliente', 'Pan y salsicha.', 1.85, 4),
+('Perrito bel', 'Queso, salsicha y beicon.', 2.25, 4),
+('Perrito say', 'Tortilla francesa y salchica.', 2.15, 4),
+('Perrito completo', 'Queso, salsicha, beicon y tortilla.', 2.45, 4),
+('Especial hot dog', 'Salsicha, aros de cebolla, tomate y tortilla.', 2.75, 4),
+('Perrito picantón', 'Salsicha, aros de cebolla y salsa brava.', 2.25, 4),
+('Perrito sabroson', 'Salsicha, beicon, cebolla y salsa barbacoa.', 2.4, 4);
 
 -- bocatas
 INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
-('Manchego', 'Anchoa, queso y pimiento.', 3.4, 6),
-('Gallego', 'Atún, huevo, pimiento y mahonesa.', 3.4, 6),
-('Catalán', 'Jamón serrano, tomate y aceite.', 2.8, 6),
-('Andaluz', 'Tortilla o lomo.', 2.8, 6),
-('Serranito', 'Lomo, jamón serrano y pimiento.', 3.4, 6),
-('Freed burguer', 'Hamburguesa frita con salsa barbacoa y cebolla.', 3.4, 6),
-('Caribeño', 'Palometa ahumada, roquefort o queso fresco.', 3.65, 6),
-('Levantino', 'Pechuga de pollo, lechuga, tomate y mahonesa.', 3.65, 6),
-('Murciano', 'Lechuga, tomate, huevo, mahonesa, espárrago y queso fresco.', 3.55, 6),
-('Frankfurt', 'Salsichas, lechuga, tomate y mahonesa', 3.45, 6),
-('Tortilla de patatas', 'Tortilla de patatas con beicon o pimiento morrón', 3.15, 6),
-('Extremeño', 'Beicon, escalope de pollo y queso fundido', 3.65, 6),
-('Asturiano', 'Beicon y queso', 3.1, 6),
-('Marinero', 'Lechuga, tomate, atún, rabanitos de mar y mahonesa', 3.4, 6),
-('Vasco', 'Lomo, beicon, salsa barbacoa y tomate natural', 3.4, 6),
-('Aragonés', 'Jamón york y queso', 2.8, 6),
-('Riojano', 'Lomo y queso fundido', 3.4, 6),
-('Castellano', 'Lomo, beicon y cebolla', 3.4, 6),
-('Sanluqueño', 'Gambas a la plancha en salsa ali-oli', 3.65, 6),
-('Sevillano', 'Salsa de salmorejo, jamón y huevo duro rallado', 3.4, 6),
-('Zamorano', 'Lomo mechado, cebolla frita y salsa al whisky', 3.65, 6),
-('Segoviano', 'Lomo, jamón y salsa verde', 3.4, 6);
+('Manchego', 'Anchoa, queso y pimiento.', 3.4, 5),
+('Gallego', 'Atún, huevo, pimiento y mahonesa.', 3.4, 5),
+('Catalán', 'Jamón serrano, tomate y aceite.', 2.8, 5),
+('Andaluz', 'Tortilla o lomo.', 2.8, 5),
+('Serranito', 'Lomo, jamón serrano y pimiento.', 3.4, 5),
+('Freed burguer', 'Hamburguesa frita con salsa barbacoa y cebolla.', 3.4, 5),
+('Caribeño', 'Palometa ahumada, roquefort o queso fresco.', 3.65, 5),
+('Levantino', 'Pechuga de pollo, lechuga, tomate y mahonesa.', 3.65, 5),
+('Murciano', 'Lechuga, tomate, huevo, mahonesa, espárrago y queso fresco.', 3.55, 5),
+('Frankfurt', 'Salsichas, lechuga, tomate y mahonesa', 3.45, 5),
+('Tortilla de patatas', 'Tortilla de patatas con beicon o pimiento morrón', 3.15, 5),
+('Extremeño', 'Beicon, escalope de pollo y queso fundido', 3.65, 5),
+('Asturiano', 'Beicon y queso', 3.1, 5),
+('Marinero', 'Lechuga, tomate, atún, rabanitos de mar y mahonesa', 3.4, 5),
+('Vasco', 'Lomo, beicon, salsa barbacoa y tomate natural', 3.4, 5),
+('Aragonés', 'Jamón york y queso', 2.8, 5),
+('Riojano', 'Lomo y queso fundido', 3.4, 5),
+('Castellano', 'Lomo, beicon y cebolla', 3.4, 5),
+('Sanluqueño', 'Gambas a la plancha en salsa ali-oli', 3.65, 5),
+('Sevillano', 'Salsa de salmorejo, jamón y huevo duro rallado', 3.4, 5),
+('Zamorano', 'Lomo mechado, cebolla frita y salsa al whisky', 3.65, 5),
+('Segoviano', 'Lomo, jamón y salsa verde', 3.4, 5);
 
 
 -- ensaladas
