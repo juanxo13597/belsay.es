@@ -15,13 +15,11 @@ CREATE TABLE familias(
 INSERT INTO familias(nombre, imagen) VALUES 
 ('Pizzas', 'assets/img/carta/pizza.png'),
 ('Chapatas', 'assets/img/carta/chapata.jpg'),
-('Roscas', 'assets/img/carta/rosca.jpg'),
 ('Paninis', 'assets/img/carta/panini.jpg'),
 ('Hot Dogs', 'assets/img/carta/hotdog.jpg'),
 ('Bocatas', 'assets/img/carta/bocata.png'),
 ('Ensaladas', 'assets/img/carta/ensalada.jpg'),
 ('Patatas', 'assets/img/carta/patata.jpg'),
--- ('Postres', 'assets/img/carta/postre.jpg'),
 ('Sandwichs', 'assets/img/carta/sandwich.png'),
 ('Hamburguesas', 'assets/img/carta/hamburguesa.png'),
 ('Bebidas', 'assets/img/carta/bebida.jpg');
@@ -68,10 +66,6 @@ INSERT INTO productos(nombre, precio2, precio3, ingredientes, familia_id) VALUES
 ('Maya', 5.55, 9.5, 'Chapata base, mezcla mágica de quesos.', 2),
 ('Mariachi', 5.55, 9.5, 'Chapata base, salmón, gambas y champiñón.', 2),
 ('Mexicana', 5.55, 9.5, 'Chapata base, beicon, atún y champiñón.', 2);
-
--- roscas
-INSERT INTO productos(nombre, precio2, ingredientes, familia_id) VALUES 
-('Ibérica', 7, 'Chapata base y york.', 3);
 
 -- paninis
 INSERT INTO productos(nombre, precio2, ingredientes, familia_id) VALUES 
