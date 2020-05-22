@@ -2,7 +2,7 @@ DROP DATABASE belsay;
 CREATE DATABASE belsay;
 USE belsay;
 
-CREATE TABLE familias(
+CREATE TABLE familias_local(
     id                  int(11) auto_increment,
     nombre              varchar(255),
     imagen              varchar(255),
@@ -12,7 +12,7 @@ CREATE TABLE familias(
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 -- familias
-INSERT INTO familias(nombre, imagen) VALUES 
+INSERT INTO familias_local(nombre, imagen) VALUES 
 ('Pizzas', 'assets/img/carta/pizza.png'),
 ('Chapatas', 'assets/img/carta/chapata.jpg'),
 ('Paninis', 'assets/img/carta/panini.jpg'),
@@ -24,7 +24,7 @@ INSERT INTO familias(nombre, imagen) VALUES
 ('Hamburguesas', 'assets/img/carta/hamburguesa.png'),
 ('Bebidas', 'assets/img/carta/bebida.jpg');
 
-CREATE TABLE productos(
+CREATE TABLE productos_local(
     id                  int(11) auto_increment,
     nombre              varchar(255),
     imagen              varchar(255),
@@ -34,13 +34,13 @@ CREATE TABLE productos(
     ingredientes        varchar(255),
     familia_id          int(11),
 
-    constraint pk_productos primary key(id),
-    constraint fg_productos_familias foreign key(familia_id) references familias(id)
+    constraint pk_productos_local primary key(id),
+    constraint fg_productos_local_familias foreign key(familia_id) references familias_local(id)
 
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 -- pizzas
-INSERT INTO productos(nombre, precio1, precio2, precio3, ingredientes, familia_id) VALUES 
+INSERT INTO productos_local(nombre, precio1, precio2, precio3, ingredientes, familia_id) VALUES 
 ('Milanesa', 5.8, 8.2, 9, 'Tomate, orégano, mozzarella y york', 1),
 ('Romana', 8.8, 12.1, 13.8, 'Tomate, orégano, mozzarella, aceitunas, alcachofa, champiñon y york.', 1),
 ('Veneciana', 7.8, 10.8, 12.2, 'Tomate, orégano mozzarella, salami, salchichas y york.', 1),
@@ -59,7 +59,7 @@ INSERT INTO productos(nombre, precio1, precio2, precio3, ingredientes, familia_i
 ('Piamonte', 6.8, 9.5, 10.6, 'Salsicha, beicon y salsa gaucha.', 1);
 
 -- chapatas
-INSERT INTO productos(nombre, precio2, precio3, ingredientes, familia_id) VALUES 
+INSERT INTO productos_local(nombre, precio2, precio3, ingredientes, familia_id) VALUES 
 ('Charra', 4.15, 7.5, 'Chapata base y york.', 2),
 ('Ranchera', 4.85, 8.5, 'Chapata base, champiñón y york.', 2),
 ('Tijuana', 4.85, 8.5, 'Chapata base, jamón serrano y atún.', 2),
@@ -68,7 +68,7 @@ INSERT INTO productos(nombre, precio2, precio3, ingredientes, familia_id) VALUES
 ('Mexicana', 5.55, 9.5, 'Chapata base, beicon, atún y champiñón.', 2);
 
 -- paninis
-INSERT INTO productos(nombre, precio2, ingredientes, familia_id) VALUES 
+INSERT INTO productos_local(nombre, precio2, ingredientes, familia_id) VALUES 
 ('Atlántico', 2.1, 'Panini base y jamón york.', 3),
 ('Pacífico', 3.1, 'Panini base, alcachofa, champiñón y york.', 3),
 ('Índico', 3.1, 'Panini base, jamón serrano, champiñón y beicon', 3),
@@ -78,7 +78,7 @@ INSERT INTO productos(nombre, precio2, ingredientes, familia_id) VALUES
 ('Maya', 3.1, 'Panini base y mágica mezcla de quesos.', 3);
 
 -- hot dog
-INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
+INSERT INTO productos_local(nombre, ingredientes, precio2, familia_id) VALUES
 ('Perrito caliente', 'Pan y salsicha.', 1.85, 4),
 ('Perrito bel', 'Queso, salsicha y beicon.', 2.25, 4),
 ('Perrito say', 'Tortilla francesa y salchica.', 2.15, 4),
@@ -88,7 +88,7 @@ INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
 ('Perrito sabroson', 'Salsicha, beicon, cebolla y salsa barbacoa.', 2.4, 4);
 
 -- bocatas
-INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
+INSERT INTO productos_local(nombre, ingredientes, precio2, familia_id) VALUES
 ('Manchego', 'Anchoa, queso y pimiento.', 3.4, 5),
 ('Gallego', 'Atún, huevo, pimiento y mahonesa.', 3.4, 5),
 ('Catalán', 'Jamón serrano, tomate y aceite.', 2.8, 5),
@@ -114,7 +114,7 @@ INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
 
 
 -- ensaladas
-INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
+INSERT INTO productos_local(nombre, ingredientes, precio2, familia_id) VALUES
 ('De la huerta', 'Lechuga, tomate y cebolla', 2.6, 6),
 ('Mixta', 'Lechuga, tomate, cebolla, huevo, atún, aceitunas y espárragos', 2.6, 6),
 ('Parisina', 'Lechuga, tomate, pollo, york, queso, zanahoria, huevo y salsa rosa o roquefort', 3.45, 6),
@@ -127,12 +127,12 @@ INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
 ('Cesar', 'Lechuga, york, pollo y picatostes con salsa cesar', 3.7, 6);
 
 -- patatas
-INSERT INTO productos(nombre, precio2, precio3, familia_id) VALUES
+INSERT INTO productos_local(nombre, precio2, precio3, familia_id) VALUES
 ('Golden', 2.1, 0 , 7),
 ('Normales', 1.3, 1.6, 7);
 
 -- sanwichs
-INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
+INSERT INTO productos_local(nombre, ingredientes, precio2, familia_id) VALUES
 ('Inglés', 'Jamón york y queso', 1.95, 8),
 ('Irlandés', 'Lechuga, tomate, espárrago, huevo y mahonesa', 2.6, 8),
 ('Croque', 'Jamón york, bechamel y emmental', 3.05, 8),
@@ -151,7 +151,7 @@ INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
 ('Austríaco', 'Lechuga, tomate, atún, huevo duro, aros de cebolla fresca y un legero toque de aceite de oliva', 2.6, 8);
 
 -- hamburguesas
-INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
+INSERT INTO productos_local(nombre, ingredientes, precio2, familia_id) VALUES
 ('Carolina', 'Carne, lechuga y tomate', 1.9, 9),
 ('Florida', 'Carne, queso, lechuga y tomate', 2.1, 9),
 ('Indiana', 'Carne, lechuga, tomate y huevo', 2.3, 9),
@@ -163,7 +163,7 @@ INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
 ('De buey', 'Queso cheddar, beicon y cebolla', 5.5, 9);
 
 -- bebidas
-INSERT INTO productos(nombre, ingredientes, precio2, familia_id) VALUES
+INSERT INTO productos_local(nombre, ingredientes, precio2, familia_id) VALUES
 ('Coca-cola', 'Lata 33CL', 1.3, 10),
 ('Coca-Cola light', 'Lata 33CL', 1.3, 10),
 ('Coca-Cola zero', 'Lata 33CL', 1.3, 10),

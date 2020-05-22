@@ -3,18 +3,18 @@ require_once("db.php");
 
 class carta extends db{
 
-    public function familias(){
-        $sql = "select * from familias";
+    public function familias_local(){
+        $sql = "select * from familias_local";
         return $result = $this->conexion->query($sql);
     }
 
-    public function productos($familia){
-        $sql = "select * from productos where familia_id='$familia'";
+    public function productos_local($familia){
+        $sql = "select * from productos_local where familia_id='$familia'";
         return $result = $this->conexion->query($sql);
     }
 
-    public function nombre_de_familia($id){
-        $sql = "select nombre from familias where id = '$id'";
+    public function nombre_de_familia_local($id){
+        $sql = "select nombre from familias_local where id = '$id'";
         return $result = $this->conexion->query($sql);
     }
 

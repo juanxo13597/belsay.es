@@ -1,21 +1,9 @@
-<div class="card-columns">
+<center>
+<div class="btn-group btn-group-lg" role="group">
 
-
-  <?php
-    if($carta->num_rows>0){
-        while($row = $carta->fetch_assoc()){
-            echo "
-                <div class='card'>
-                    <a href='?pag=ver_carta&&familia=".$row['id']."'><img class='card-img-top' src='".$row['imagen']."' alt='".$row['nombre']."'></a>
-                    <div class='card-body'>
-                    <h5 class='card-title text-center'><a class='text-success' href='?pag=ver_carta&&familia=".$row['id']."'>".$row['nombre']."</a> </h5>
-                    </div>
-                </div>
-            ";
-        }
-    }
-  ?>
-
-
+<a href="?pag=carta_local" class="btn btn-outline-success">Local</a>
+<a href="" class="btn btn-outline-success">Domicilio</a>
 
 </div>
+
+</center>
