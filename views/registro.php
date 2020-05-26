@@ -7,23 +7,23 @@
 
 
             <div class="form-group">
-                <input type="email" class="form-control" name="email" placeholder="Email (email@belsay.es)" required >
+                <input type="email" class="form-control" name="email" placeholder="Email (email@belsay.es)" required value="<?=$_POST['email']?>">
             </div>
 
             <div class="form-group">
-                <input type="text" maxlength="10" pattern=".{10,}" class="form-control" name="dni" placeholder="DNI (00000000-A)" required >
+                <input type="text" maxlength="10" pattern=".{10,}" class="form-control" name="dni" placeholder="DNI (00000000-A)" required value="<?=$_POST['dni']?>>
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control" name="nombre" placeholder="Nombre " required >
+                <input type="text" class="form-control" name="nombre" placeholder="Nombre " required value="<?=$_POST['nombre']?>>
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control" name="apellidos" placeholder="Apellidos" >
+                <input type="text" class="form-control" name="apellidos" placeholder="Apellidos" value="<?=$_POST['apellidos']?>>
             </div>
 
             <div class="form-group">
-                <input type="tel" maxlength="9" class="form-control" name="telefono" placeholder="Telefono (699999999)" required >
+                <input type="tel" pattern="[0-9]{9}" maxlength="9" class="form-control" name="telefono" placeholder="Telefono (699999999)" required value="<?=$_POST['telefono']?>>
             </div>
 
             
@@ -43,15 +43,15 @@
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control" name="calle" placeholder="Calle" required >
+                <input type="text" class="form-control" name="calle" placeholder="Calle" required value="<?=$_POST['calle']?>>
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control" name="numero" placeholder="Numero (1º B)" required >
+                <input type="text" class="form-control" name="numero" placeholder="Numero (1º B)" required value="<?=$_POST['numero']?>>
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control" name="localidad" placeholder="Localidad" required >
+                <input type="text" class="form-control" name="localidad" placeholder="Localidad" required value="<?=$_POST['localidad']?>>
             </div>
 
 
