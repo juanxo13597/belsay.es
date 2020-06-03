@@ -28,13 +28,16 @@ error_reporting(0);
 
     <div class="container text-center">
         <h1 class="display-1 text-light">ADMINISTRACIÓN</h1>
+        <?php require_once("inc/menugeneral.php"); ?>
         <div class="row">
-            <?php require_once("inc/menu.php"); ?>
+            <?php require_once("inc/menulocal.php"); ?>
 
             </div>
 
             <!-- container -->
-            <div class="col-9 bg-light rounded ml-1 p-3"><?php require_once("controllers/".navegacion().".php"); ?></div>
+            <div class="col-6 bg-light rounded ml-1 p-2"><?php require_once("controllers/".navegacion().".php"); ?></div>
+
+            <?php require_once("inc/menudomicilio.php"); ?>
         </div>
 
     </div>

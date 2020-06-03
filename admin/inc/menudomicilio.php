@@ -1,5 +1,6 @@
 <!-- menu -->
 <div class="col-2 bg-light rounded p-0">
+    <h3>Domicilio</h3>
     <ul class="nav flex-column">
         <li class="nav-item">
             <a class="nav-link" href="?pag=familias">Familias</a>
