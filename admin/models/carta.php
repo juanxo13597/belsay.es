@@ -1,4 +1,5 @@
 <?php
+require_once("../models/db.php");
 
 class carta extends db{
 
