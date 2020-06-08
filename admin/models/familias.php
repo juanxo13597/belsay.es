@@ -4,7 +4,7 @@ require_once("../models/db.php");
 class familias extends db{
     public $nombre, $imagen;
 
-    public function get_familias(){
+    public function get_familias_local(){
         $sql = "select * from familias_local";
         return $result = $this->conexion->query($sql);
     }
