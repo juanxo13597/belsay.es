@@ -16,7 +16,7 @@
                         echo "<td>".$row['id']."</td>";
                         echo "<td>".$row['nombre']."</td>";
                         echo "<td><img src='../".$row['imagen']."' alt='".$row['nombre']."' width='100' heigt='100'></td>";
-                        echo "<td>accion</td>";
+                        echo "<td> <a href='?pag=familias_local_editar&&id=".$row['id']."'>Editar</a> </td>";
                         echo "</tr>";
                     }
                 }

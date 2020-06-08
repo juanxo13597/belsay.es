@@ -5,6 +5,5 @@ $result_familias = $familias->get_familias();
 
 
 
-
-require_once("views/familias.php");
+require_once("views/familias_local.php");
 ?>

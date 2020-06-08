@@ -25,20 +25,20 @@ error_reporting(0);
 </head>
 
 <body class="bg-dark">
-
-    <div class="container text-center">
-        <h1 class="display-1 text-light">ADMINISTRACIÓN</h1>
-        <?php require_once("inc/menugeneral.php"); ?>
-        <div class="row">
+    
+    <div class="container">
+    <?php require_once("inc/menugeneral.php"); ?>
+        <div class="row mt-1">
             <?php require_once("inc/menulocal.php"); ?>
 
-            </div>
-
-            <!-- container -->
-            <div class="col-6 bg-light rounded ml-1 p-2"><?php require_once("controllers/".navegacion().".php"); ?></div>
-
-            <?php require_once("inc/menudomicilio.php"); ?>
         </div>
+
+        <!-- container -->
+        <div class="col-8 bg-light p-2 border border-secondary"><?php require_once("controllers/".navegacion().".php"); ?>
+        </div>
+
+        <?php require_once("inc/menudomicilio.php"); ?>
+    </div>
 
     </div>
 
