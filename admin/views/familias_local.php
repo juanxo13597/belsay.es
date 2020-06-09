@@ -1,15 +1,14 @@
 <table id="familias" class="table table-light">
     <thead class="thead-light">
         <tr>
-            <th>ID</th>
+        <th>ID</th>
             <th>Nombre</th>
             <th>Imagen</th>
             <th>Acción</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <?php
+        <?php
                 if($result_familias->num_rows>0){
                     while($row = $result_familias->fetch_assoc()){
                         echo "<tr>";
@@ -21,9 +20,9 @@
                     }
                 }
             ?>
-        </tr>
     </tbody>
 </table>
+
 
 
 <script>
